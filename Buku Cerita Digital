@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Buku Cerita Digital Biota Laut</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0099cc 0%, #66ccff 100%);
+    margin: 0;
+    padding: 0;
+    color: #004d66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+#storybook {
+  background: #e0f7fa;
+  width: 500px; /* Ubah dari 320px */
+  max-width: 95vw; /* Supaya tetap responsif */
+  border-radius: 16px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  overflow: hidden;
+  position: relative;
+  }
+  header {
+    background-color: #007799;
+    padding: 20px;
+    color: #e0f7fa;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .page {
+  padding: 40px 30px;
+  min-height: 400px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.6s ease forwards;
+  }
+  .page.active {
+    display: flex;
+  }
+  .character-img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+  }
+  h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    color: #004d66;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #006680;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background: #007799;
+    padding: 15px 20px;
+  }
+  button {
+    background: #005f73;
+    color: #e0f7fa;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover:not(:disabled) {
+    background: #004459;
+  }
+  button:disabled {
+    background: #aacfd9;
+    cursor: default;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #004d66;
+    padding: 10px;
+    background: #b3e0ff;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+  }
+</style>
+</head>
+<body>
+  <section id="storybook" aria-label="Buku Cerita Digital tentang Biota Laut">
+    <header>Buku Cerita Biota Laut</header>
+
+    <!-- Halaman 0 - Judul -->
+    <article class="page active" id="page-0" role="region" aria-live="polite" aria-label="Halaman Judul">
+      <img src="https://assets.onecompiler.app/43kfv5fxp/43kfv5uct/WhatsApp%20Image%202025-06-01%20at%2019.44.13_821bf42b.jpg" class="character-img" alt="Biota Laut" />
+      <h2>Selamat Datang di Dunia Bawah Laut </h2>
+      <p>Yuk, kita lihat bersama karakter biota laut yang unik dan penuh warna! Temui sahabat-sahabat bawah laut yang punya peran penting dalam menjaga laut.</p>
+    </article>
+
+<article class="page" id="page-1">
+  <img src="https://assets.onecompiler.app/43kfv5fxp/43kmzef4v/WhatsApp%20Image%202025-06-03%20at%2014.14.35_095f5d9d.jpg" class="character-img" alt="Karang Laut" />
+  <h2>Cory si Karang</h2>
+  <p>Cory adalah karang tua yang penuh warna. Ia menjadi rumah bagi banyak makhluk laut kecil dan membantu menjaga kualitas air laut dengan menyaring kotoran. Tanpa Cory, ekosistem laut akan kehilangan tempat tinggal dan perlindungan.</p>
+</article>
+
+    <article class="page" id="page-2" role="region" aria-live="polite" aria-label="Halaman Cerita Nemo">
+      <img src="https://assets.onecompiler.app/43kfv5fxp/43kfv5uct/WhatsApp%20Image%202025-06-01%20at%2020.25.46_65ba6e60.jpg" class="character-img" alt="Ikan Badut" />
+      <h2>Nemo si Ikan Badut</h2>
+      <p>Nemo, ikan badut kecil yang ceria, tinggal di antara tentakel anemon. Ia menunjukkan pentingnya simbiosis, yaitu kerja sama saling menguntungkan antara makhluk laut, yang membantu menjaga keseimbangan ekosistem.</p>
+    </article>
+
+    <article class="page" id="page-3" role="region" aria-live="polite" aria-label="Halaman Cerita Ollie">
+      <img src="https://assets.onecompiler.app/43kfv5fxp/43kfv5uct/WhatsApp%20Image%202025-06-01%20at%2020.29.50_962b9df3.jpg" class="character-img" alt="Gurita" />
+      <h2>Ollie si Gurita Pintar</h2>
+      <p>Ollie, gurita yang cerdik, suka menyamar dengan warna-warni kulitnya agar tidak terlihat pemangsa. Ia bisa mengeluarkan tinta saat merasa terancam.</p>
+    </article>
+
+    <article class="page" id="page-4" role="region" aria-live="polite" aria-label="Halaman Cerita Timmy">
+      <img src="https://assets.onecompiler.app/43kfv5fxp/43kfv5uct/WhatsApp%20Image%202025-06-01%20at%2020.33.09_e09dbf04.jpg" class="character-img" alt="Penyu Laut" />
+      <h2>Timmy si Penyu</h2>
+      <p>Timmy adalah penyu yang bijaksana dan suka berkelana jauh di laut. Ia membantu menjaga terumbu karang dan berteman dengan semua makhluk di laut.</p>
+    </article>
+
+    <article class="page" id="page-5" role="region" aria-live="polite" aria-label="Halaman Cerita Wally">
+      <img src="https://assets.onecompiler.app/43kfv5fxp/43kfv5uct/WhatsApp%20Image%202025-06-01%20at%2020.58.29_a52000c8.jpg" class="character-img" alt="Paus Biru" />
+      <h2>Wally si Paus Biru</h2>
+      <p>Wally, paus biru besar dan lembut, membantu menyuburkan laut dengan kotorannya yang kaya nutrisi. Suaranya menyatukan makhluk laut untuk hidup damai dan menjaga lautan tetap harmonis.</p>
+    </article>
+
+    <article class="page" id="page-6" role="region" aria-live="polite" aria-label="Halaman Cerita Bubu">
+      <img src="https://assets.onecompiler.app/43kfv5fxp/43kmzef4v/WhatsApp%20Image%202025-06-03%20at%2013.28.13_921a4d9b.jpg" class="character-img" alt="Ikan Buntal" />
+      <h2>Bubu si Ikan Buntal</h2>
+      <p>Bubu sangat suka menolong makhluk kecil di laut. Ia berani menghadapi predator dan menjaga lingkungan sekitar tetap aman, menjadi simbol keberanian untuk melindungi laut dari ancaman.</p>
+    </article>
+    
+   <article class="page" id="page-7">
+    <img src="https://assets.onecompiler.app/43kfv5fxp/43kmzef4v/WhatsApp%20Image%202025-06-03%20at%2013.32.46_3eba6ebf.jpg" class="character-img" alt="Kerang Mutiara" />
+    <h2>Shelly si Kerang Mutiara</h2>
+    <p>Shelly adalah kerang yang pemalu, namun menyimpan mutiara yang indah di dalam cangkangnya. Ia menyaring air laut untuk mendapatkan makanannya. Tanpa disadari, ia membantu menjaga air laut tetap bersih dan jernih agar biota lain bisa hidup sehat.</p>
+   </article>
+
+  <article class="page" id="page-8">
+   <img src="https://assets.onecompiler.app/43kfv5fxp/43kmzef4v/WhatsApp%20Image%202025-06-03%20at%2013.38.12_d6a08ec6.jpg" class="character-img" alt="Ikan Pari" />
+   <h2>Finny si Ikan Pari</h2>
+   <p>Finny adalah ikan pari yang lincah dan cepat. Ia suka meluncur di atas pasir laut sambil membawa pesan dari satu tempat ke tempat lain.</p>
+  </article>
+
+ <article class="page" id="page-9">
+  <img src="https://assets.onecompiler.app/43kfv5fxp/43kmzef4v/WhatsApp%20Image%202025-06-03%20at%2013.51.19_a5a65cfb.jpg" class="character-img" alt="Ubur-Ubur" />
+  <h2>Gloom si Ubur-Ubur</h2>
+  <p>Gloom yang bersinar di malam hari menunjukkan keindahan laut yang perlu dijaga. Ia membantu keseimbangan populasi plankton dengan memakannya, agar laut tetap sehat.</p>
+ </article>
+
+<article class="page" id="page-10">
+  <img src="https://assets.onecompiler.app/43kfv5fxp/43kmzef4v/WhatsApp%20Image%202025-06-03%20at%2013.55.04_d78696c0.jpg" class="character-img" alt="Kepiting Merah" />
+  <h2>Coppi si Kepiting Merah</h2>
+  <p>Coppi adalah kepiting penjaga pantai. Ia suka menjaga keamanan dan memastikan tidak ada yang mengganggu habitat laut.</p>
+</article>
+
+<article class="page" id="page-11">
+  <img src="https://assets.onecompiler.app/43kfv5fxp/43kmzef4v/WhatsApp%20Image%202025-06-03%20at%2014.28.59_5a3d52e7.jpg" class="character-img" alt="Bintang Laut" />
+  <h2>Ital si Bintang Laut</h2>
+  <p>Ital selalu duduk manis di batu karang, mendengarkan cerita teman-temannya. Dengan ketenangannya, ia membantu membersihkan dasar laut dari sampah laut, menjaga kualitas air dan lingkungan laut tetap bersih.</p>
+</article>
+
+<article class="page" id="page-12">
+  <img src="https://assets.onecompiler.app/43kfv5fxp/43kmzef4v/WhatsApp%20Image%202025-06-03%20at%2015.49.29_81f6b6b9.jpg" class="character-img" alt="Plankton Laut" />
+  <h2>Elon si Plankton</h2>
+  <p>Elon sangat kecil hingga hampir tak terlihat, tapi ia sangat penting! Ia menghasilkan oksigen untuk lautan dan menjadi makanan bagi banyak makhluk laut. Elon juga membantu menjaga kehidupan di laut tetap berjalan dengan seimbang.</p>
+</article>
+
+<article class="page" id="page-13" role="region" aria-live="polite" aria-label="Halaman Kesimpulan">
+  <img src="https://assets.onecompiler.app/43kfv5fxp/43kfv5uct/WhatsApp%20Image%202025-06-01%20at%2021.06.46_b6f46192.jpg" class="character-img" alt="Biota Laut" />
+  <h2>Sampai Jumpa, Penjaga Laut!</h2>
+  <p>Terima kasih telah mengenal sahabat-sahabat laut yang luar biasa. Setiap makhluk punya peran penting dalam menjaga kebersihan dan keseimbangan lautan. Yuk, kita juga ikut menjaga laut dengan tidak membuang sampah sembarangan dan mencintai biota laut!</p>
+</article>
+
+    <nav>
+      <button id="prevBtn" aria-label="Halaman sebelumnya" disabled>Kembali</button>
+      <button id="nextBtn" aria-label="Halaman berikutnya">Lanjut</button>
+    </nav>
+    <footer>&copy; 2025 Buku Cerita Digital Biota Laut</footer>
+  </section>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentPage = 0;
+
+    function updatePage(newPage) {
+      if (newPage < 0 || newPage >= pages.length) return;
+      pages[currentPage].classList.remove('active');
+      currentPage = newPage;
+      pages[currentPage].classList.add('active');
+      prevBtn.disabled = currentPage === 0;
+      nextBtn.disabled = currentPage === pages.length - 1;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      updatePage(currentPage - 1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      updatePage(currentPage + 1);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      else if (e.key === 'ArrowRight') nextBtn.click();
+    });
+  </script>
+</body>
+</html>
